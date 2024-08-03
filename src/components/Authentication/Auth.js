@@ -2,9 +2,7 @@ import React from "react";
 import "./auth.scss";
 import image from "../../assets/drone.avif";
 import Login from "./Login/Login";
-import { useGlobal } from "../Context/Context";
 const Auth = () => {
-  const { showRegister } = useGlobal();
 
   return (
     <>

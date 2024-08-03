@@ -4,7 +4,6 @@ import { Data } from '../../Data/data';
 import DroneModal from '../../Modal/DroneModal';
 
 const ListCard = ({drones}) => {
-  const [data] = useState(Data);
   const [isDroneModalOpen, setIsDroneModalOpen] = useState(false);
   const [selectedDrone, setSelectedDrone] = useState(null);
   
