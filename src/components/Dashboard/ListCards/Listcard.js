@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './listCard.scss';
-import { Data } from '../../Data/data';
 import DroneModal from '../../Modal/DroneModal';
 
 const ListCard = ({drones}) => {
