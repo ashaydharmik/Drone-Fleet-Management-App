@@ -1,0 +1,44 @@
+@import "../../css-config/mixins.scss";
+.list-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .lists {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        row-gap: 30px;
+        @include md{
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .drone-card{
+            background-color: antiquewhite;
+            border-radius: 5px;
+            box-shadow: 2px 3px 20px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           cursor: pointer;
+           background:greenyellow;
+           padding: 30px 0px;
+           height:75px;
+           @include md{
+            height: 150px;
+           }
+           h2{
+            margin: 0;
+           }
+           p{
+            text-align: center;
+           }
+        }
+    }
+    
+}

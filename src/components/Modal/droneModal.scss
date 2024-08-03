@@ -1,0 +1,62 @@
+@import "../css-config/mixins.scss";
+
+.drone-modal-container {
+  width: 100%;
+  // height: 100%;
+  padding: 0;
+
+  .close {
+    width: 100%;
+    p {
+      margin: 0;
+      text-align: right;
+      svg{
+
+          cursor: pointer;
+      }
+    }
+  }
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    @include md{
+        flex-direction: row;
+    }
+    .details{
+        width: 100%;
+        @include md{
+            width: 50%;  
+        }
+        h2{
+            text-align: center;
+        }
+        ul,ol{
+            li{
+                p{
+                    margin: 0;
+                    padding: 2px;
+                }
+            }
+        }
+    }
+    .maintenance{
+        width: 100%;
+        @include md{
+            width: 50%;  
+        }
+        h2{
+            text-align: center;
+        }
+        ul,ol{
+            li{
+                p{
+                    margin: 0;
+                    padding: 2px;
+                }
+            }
+        }
+    }
+  }
+}

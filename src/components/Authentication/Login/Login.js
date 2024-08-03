@@ -29,7 +29,7 @@ const navigate = useNavigate()
 
     if (user) {
       toast.success("Login successful!");
-      localStorage.setItem("user", JSON.stringify(user.data));
+      localStorage.setItem("user", JSON.stringify(user));
       setTimeout(()=>{
         navigate("/dashboard")
       }, 1000)
