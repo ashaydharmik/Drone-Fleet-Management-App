@@ -19,6 +19,8 @@ const DroneModal = ({ isOpen, onClose, drone }) => {
       height: '50%',
       borderRadius: '10px',
       padding: '20px',
+      backgroundColor: 'rgb(185 255 230)',
+      // background: linear-gradient(115deg, #c7e1fc, #6be5ba),
     },
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -41,30 +43,58 @@ const DroneModal = ({ isOpen, onClose, drone }) => {
             <p><IoMdClose onClick={onClose}/></p>
         </div>
         <div className='wrapper'>
-       <div className='details'>
-        <h2>Details</h2>
-        <ol>
-            <li><p><strong>Id:</strong> {drone.id}</p></li>
-            <li><p><strong>Status:</strong> {drone.status}</p></li>
-            <li><p><strong>Flight Hours:</strong> {drone.flight_hours}</p></li>
-            <li><p><strong>Battery Status:</strong> {drone.battery_status}</p></li>
-            <li> <p><strong>Last Known Location:</strong> {`(${drone.last_known_location[0]}, ${drone.last_known_location[1]})`}</p></li>
-            <li> <p><strong>Current Mission:</strong> {drone.current_mission}</p></li>
-        </ol>
-       </div>
+        <div className='details'>
+    <h2>Details</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{drone.id}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{drone.status}</td>
+            </tr>
+            <tr>
+                <th>Flight Hours</th>
+                <td>{drone.flight_hours}</td>
+            </tr>
+            <tr>
+                <th>Battery Status</th>
+                <td>{drone.battery_status}</td>
+            </tr>
+            <tr>
+                <th>Last Known Location</th>
+                <td>{`(${drone.last_known_location[0]}, ${drone.last_known_location[1]})`}</td>
+            </tr>
+            <tr>
+                <th>Current Mission</th>
+                <td>{drone.current_mission}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
        <div className='maintenance'>
        <h2>Maintenance Logs</h2>
-       <ol>
-          {drone.maintenance_logs.map((log, index) => (
-            <li key={index}>
-              <p><strong>Date:</strong> {log.date}</p>
-              <ul>
-                <li><p><strong>Description:</strong> {log.description}</p></li>
-                <li><p><strong>Technician:</strong> {log.technician}</p></li>
-              </ul>
-            </li>
-          ))}
-        </ol>
+       <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Technician</th>
+            </tr>
+        </thead>
+        <tbody>
+            {drone.maintenance_logs.map((log, index) => (
+                <tr key={index}>
+                    <td>{log.date}</td>
+                    <td>{log.description}</td>
+                    <td>{log.technician}</td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
        </div>
 
         </div>

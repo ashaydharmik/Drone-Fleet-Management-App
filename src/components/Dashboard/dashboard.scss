@@ -1,10 +1,13 @@
 @import "../css-config/mixins.scss";
 
 .dashboard-container{
+  background: linear-gradient(115deg, #c7e1fc, #6be5ba);
     width: 100%;
     height: 100%;
     .logout-container {
         width: 100%;
+        
+
         cursor: pointer;
         p {
             position: absolute;
@@ -13,11 +16,11 @@
           align-items: center;
           gap: 1rem;
           font-size: 1rem;
-          color: #cf3636;
+          color: #ffffff;
           font-weight: 500;
           margin-bottom: 1rem;
           cursor: pointer;
-          background-color: white;
+          background-color: rgb(0, 0, 0);
           padding: 8px 15px;
           border-radius: 5px;
           margin-left: 10px;
