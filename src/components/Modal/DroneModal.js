@@ -14,13 +14,11 @@ const DroneModal = ({ isOpen, onClose, drone }) => {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      backgroundColor: 'white',
       width: '70%',
       height: '50%',
       borderRadius: '10px',
       padding: '20px',
       backgroundColor: 'rgb(185 255 230)',
-      // background: linear-gradient(115deg, #c7e1fc, #6be5ba),
     },
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
