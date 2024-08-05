@@ -14,7 +14,7 @@
   .left-container {
     width: 100%;
     background-color:#19ddda;
-    height: 50vh;
+    height: 66vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +23,13 @@
       height: 100vh;
     }
     .content-container {
-      width: 50%;
-      height: 73%;
+      width: 80%;
+      height: auto;
       display: grid;
       place-items: center;
       @include md{
         height: 50%;
+        width: 50%;
       }
       .image-container {
         width: fit-content;
@@ -56,12 +57,12 @@
         width: 100%;
         text-align: center;
         p {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
           color: white;
           font-weight: 600;
           margin-bottom: 0.5rem;
           &:last-child {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: normal;
           }
         }
@@ -74,7 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 44vh;
     @include md{
       width: 40%;
       height: 100vh;

@@ -6,8 +6,6 @@
     height: 100%;
     .logout-container {
         width: 100%;
-        
-
         cursor: pointer;
         p {
             position: absolute;
@@ -28,6 +26,12 @@
           svg {
             width: 15px;
             height: 20px;
+          }
+          span{
+            display: none;
+            @include md{
+              display:block;
+            }
           }
         }
       }
